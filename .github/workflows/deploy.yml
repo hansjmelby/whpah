@@ -31,6 +31,7 @@ jobs:
         uses: hashicorp/setup-packer@v3
 
       - name: Build snapshot
+        if: ${{ steps.changed-files.outputs.any_changed == 'true' }}
         run: |
           packer init "$PACKER_FILE"
           packer build --force "$PACKER_FILE"
