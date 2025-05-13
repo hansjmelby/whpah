@@ -8,7 +8,7 @@ spec:
   goTemplateOptions: ['missingkey=error']
   generators:
     - git:
-        repoURL: https://github.com/bakseter/whpah
+        repoURL: https://github.com/hansjmelby/whpah
         revision: HEAD
         directories:
           - path: manifests/cluster-addons/**
@@ -16,11 +16,11 @@ spec:
     metadata:
       name: '{{.path.basename}}'
       labels:
-        bakseter.net/type: 'cluster-addon'
+        melby.casa/type: 'cluster-addon'
     spec:
       project: default
       source:
-        repoURL: https://github.com/bakseter/whpah
+        repoURL: https://github.com/hansjmelby/whpah
         targetRevision: HEAD
         path: '{{.path.path}}'
       destination:

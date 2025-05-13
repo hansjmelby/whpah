@@ -8,7 +8,7 @@ spec:
   goTemplateOptions: ['missingkey=error']
   generators:
     - git:
-        repoURL: https://github.com/bakseter/whpah
+        repoURL: https://github.com/hansjmelby/whpah
         revision: HEAD
         directories:
           - path: manifests/applications/**
@@ -16,11 +16,11 @@ spec:
     metadata:
       name: '{{.path.basename}}'
       labels:
-        bakseter.net/type: 'application'
+        melby.casa/type: 'application'
     spec:
       project: default
       source:
-        repoURL: https://github.com/bakseter/whpah
+        repoURL: https://github.com/hansjmelby/whpah
         targetRevision: HEAD
         path: '{{.path.path}}'
         directory:
